@@ -1,0 +1,30 @@
+/* 
+body{
+  
+
+    
+    height: 100%;
+    margin:auto;
+    font-size:14px;
+    font-family:Verdana;
+}
+.container {
+
+    margin-top: 240px;
+    text-align: center;
+
+}
+
+#responsecontainer {
+   
+    align-self: center;
+    align-items: center;
+}
+.header{
+    padding-bottom: 10px;
+    display: block;
+    background:#E1FFEE;
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px ;
+} */
+
