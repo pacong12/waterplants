@@ -1,7 +1,7 @@
 <?php
-    include "./koneksi.php";
-    $sql = mysqli_query($koneksi, "SELECT sum(kelembaban) FROM tb_sensor ORDER BY id");
-    $tampil = mysqli_query($koneksi, "SELECT * FROM tb_sensor");
+    include "../koneksi.php";
+    $sql = mysqli_query($koneksi, "SELECT sum(kelembaban) FROM sensor ORDER BY id");
+    $tampil = mysqli_query($koneksi, "SELECT * FROM sensor");
     $jml_data = mysqli_num_rows($tampil);
     while($data= mysqli_fetch_array($sql)){
     //    $jml_data = $jumlah_barang;
@@ -16,12 +16,12 @@
 ?>
 <?php
 $bagi = 100/100; 
-$query = mysqli_query($koneksi, "SELECT * FROM tb_sensor ORDER BY id DESC LIMIT 1");
+$query = mysqli_query($koneksi, "SELECT * FROM sensor ORDER BY id DESC LIMIT 1");
 while ($data1= mysqli_fetch_row($query)){
     
   $percent = (($data1[1]+19)/5)*$bagi;
 };
-$y = mysqli_query($koneksi, "SELECT * FROM tb_sensor ");
+$y = mysqli_query($koneksi, "SELECT * FROM sensor ");
 $dx = mysqli_num_rows($y);
 while ($result = mysqli_fetch_array($y)){
     $umur[] =$result['kelembaban'];

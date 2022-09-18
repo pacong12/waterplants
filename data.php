@@ -1,11 +1,11 @@
 <?php 
-        $koneksi= new mysqli('localhost', 'root', '', 'db_sensor');
-        $sql_ID = mysqli_query($koneksi, "SELECT MAX(id) FROM tb_sensor");
+        include "./koneksi.php";
+        $sql_ID = mysqli_query($koneksi, "SELECT MAX(id) FROM sensor");
         $data_ID = mysqli_fetch_array($sql_ID);
 
         $ID_akhir = $data_ID['MAX(id)'];
         $ID_awal = $ID_akhir -4 ;
-        $sql = "SELECT * FROM tb_sensor WHERE id>= '$ID_awal' and id<='$ID_akhir' ORDER BY id ASC";
+        $sql = "SELECT * FROM sensor WHERE id>= '$ID_awal' and id<='$ID_akhir' ORDER BY id ASC";
         $kelembaban = $koneksi->query($sql);
         $tanggal = $koneksi->query($sql);
 
