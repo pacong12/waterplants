@@ -3,6 +3,6 @@
     $user = "admin";
     $pass = "admin1234";
     $db = "waterplant";
-    $koneksi = mysqli_connect($host, $user, $pass, $db);
-
+    $prot = 3306;
+    $koneksi = mysqli_connect($host, $user, $pass, $db, $prot);
 ?>
